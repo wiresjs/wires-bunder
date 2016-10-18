@@ -90,11 +90,9 @@ export class Module {
             return input;
         }
         let wrapCurrent = (module: Module) => {
-            let moduleProjectPath = convertToProjectPath(module.filePath)
-            console.log(moduleProjectPath, " of (" + module.userPath);
+            let moduleProjectPath = convertToProjectPath(module.filePath);
             module.deps.forEach(dep => {
-                let depProjectPath = convertToProjectPath(dep.filePath)
-                console.log("\t", depProjectPath, " of (" + dep.userPath);
+                let depProjectPath = convertToProjectPath(dep.filePath);
                 if (dep.deps.length) {
                     wrapCurrent(dep);
                 }
