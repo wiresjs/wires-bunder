@@ -1,0 +1,43 @@
+{
+  "name": "wires-bundler",
+  "version": "1.1.0",
+  "description": "Hello!",
+  "typings": "./dist/typings/index.d.ts",
+  "main": "dist/commonjs/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "gulp build; ./node_modules/mocha/bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wiresjs/wires-bundler.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wiresjs/wires-bundler/issues"
+  },
+  "homepage": "https://github.com/wiresjs/wires-bundler#readme",
+  "devDependencies": {
+    "@types/node": "^6.0.41",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-typescript": "^3.0.1",
+    "mocha": "^3.1.0",
+    "run-sequence": "^1.2.2",
+    "should": "^11.1.0",
+    "typescript": "^2.0.3",
+    "wires-reactive": "^1.0.3"
+  },
+  "dependencies": {
+    "@types/node": "^6.0.45",
+    "app-root-path": "^2.0.1",
+    "realm-utils": "^1.0.3",
+    "walk": "^2.3.9"
+  }
+}
