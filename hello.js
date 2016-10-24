@@ -1,11 +1,11 @@
-const wiresBundler = require("./build/commonjs/index.js");
-const should = require("should");
-const FileManager = wiresBundler.FileManager;
-const ModuleCompiler = wiresBundler.ModuleCompiler;
-const Module = wiresBundler.Module;
-const ProjectCompiler = wiresBundler.ProjectCompiler;
+const build = require("./build/commonjs/index.js");
 
-let m = new Module("./test-project/index.js");
-m.resolve()
+const getAbsoluteEntryPath = build.getAbsoluteEntryPath;
+const Module = build.Module;
+const FuseBox = build.FuseBox;
+const ModuleCollection = build.ModuleCollection;
+let fuseBox = new FuseBox();
+fuseBox.start("./test-project/index.js");
 
-m.wrap();
+// let contents = m.wrap();
+// fs.writeFileSync("./out.js", contents.join("\n\n"));
